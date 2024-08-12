@@ -1,9 +1,11 @@
 import ApiRequestPart from "./ApiRequestPart";
+import HttpOptions from "./HttpOptions";
 
 const Main = () => {
   return (
-    <div>
+    <div className="  w-full">
       <ApiRequestPart />
+      <HttpOptions />
     </div>
   );
 };
