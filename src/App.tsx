@@ -5,7 +5,7 @@ import Main from "./components/Main";
 function App() {
   return (
     <RecoilRoot>
-      <div className="  flex bg-gray-900 text-white w-screen h-screen">
+      <div className="flex  text-white w-screen">
         <History />
         <Main />
       </div>

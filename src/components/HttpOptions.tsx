@@ -11,13 +11,14 @@ const HttpOptions = () => {
       <div className="flex   px-2">
         <button
           onClick={() => setRequestOption("header")}
-          className="bg-slate-800 active:bg-slate-500 cursor-pointer focus:bg-slate-400  px-2 py-2"
+          className="flex-1 bg-[#1E1E1E] active:bg-orange-600 cursor-pointer focus:bg-red-600  px-2 py-2"
         >
           Headers
         </button>
+        <div className="border-r border-zinc-600"></div>
         <button
           onClick={() => setRequestOption("body")}
-          className="bg-slate-800 active:bg-slate-500 cursor-pointer focus:bg-slate-400  px-2 py-2"
+          className="bg-[#1E1E1E] flex-1 active:bg-orange-600 cursor-pointer focus:bg-orange-600  px-2 py-2"
         >
           Body
         </button>

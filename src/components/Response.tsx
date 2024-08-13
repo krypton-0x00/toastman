@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-import Editor from "@monaco-editor/react";
 import ResponseOptions from "./ResponseOptions";
+import { useRecoilValue } from "recoil";
+import { responseOption } from "../store/atoms/responseOptions";
+import ResponseHeaders from "./ResponseHeaders";
+import ResponseBody from "./ResponseBody";
 
 function Response() {
+  const currentResponseOption: string = useRecoilValue(responseOption);
   return (
     <div className="flex flex-col gap-4">
       <ResponseOptions />
-      <div className="flex gap-7 px-2">
+      <div className="flex gap-7 py-3 px-2  border-y border-zinc-600">
         <p>
           Status: <span className="text-green-600">200</span>
         </p>
@@ -19,9 +20,12 @@ function Response() {
           Size <span className="text-green-600">13.6kb</span>
         </p>
       </div>
-      <div className="px-2 py-2 w-[90%] ">
-        <Editor height="30vh" width="100%" defaultLanguage="json" />
-      </div>
+
+      {currentResponseOption === "body" ? (
+        <ResponseBody />
+      ) : (
+        <ResponseHeaders />
+      )}
     </div>
   );
 }
