@@ -1,6 +1,6 @@
 const ApiRequestPart = () => {
   return (
-    <div className="px-2 py-2 flex flex-col  gap-7">
+    <div className="px-2 py-2 flex flex-col  gap-7 w-[90%]">
       <input
         className="text-xl bg-transparent  focus:outline-none w-[90%] text-white px-2  font-poppins"
         value="untitled"
@@ -17,7 +17,7 @@ const ApiRequestPart = () => {
           type="search"
           placeholder="http://example.com/api/"
         />
-        <button className="text-sm font-normal bg-red-600 px-4 py-2 rounded-sm">
+        <button className="text-sm font-normal active:scale-95 bg-red-600 px-4 py-2 rounded-sm">
           Send
         </button>
       </div>
